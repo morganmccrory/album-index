@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe SongsController do
+describe SongsController, :type => :controller do
 
   describe "GET #index" do
     it "assigns @songs" do
