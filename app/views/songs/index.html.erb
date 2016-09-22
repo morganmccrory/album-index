@@ -1,0 +1,9 @@
+<h1>TuneCore Album Index</h1>
+
+<%= form_tag songs_path, :method => 'get', :id => "songs_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :title => nil %>
+  </p>
+  <div id="songs"><%= render 'songs' %></div>
+<% end %>
