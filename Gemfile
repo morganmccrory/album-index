@@ -16,6 +16,7 @@ gem "twitter-bootstrap-rails"
 gem 'therubyracer', platforms: :ruby
 
 gem 'will_paginate', '3.0.7'
+gem 'has_scope'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -2,7 +2,7 @@ class SongsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @songs = Song.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    @songs = Song.search(params[:title], params[:artist], params[:album]).order(sort_column + " " + sort_direction).paginate(:per_page => 10, :page => params[:page])
   end
 
   private

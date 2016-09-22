@@ -1,6 +1,17 @@
-<% @songs.each do |song| %>
-  <%= song.title %><br>
-<% end %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Album</th>
+  </tr>
+  <% @songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+      <td><%= song.artist %></td>
+      <td><%= song.album %></td>
+    </tr>
+  <% end %>
+</table>
 
 <%= hidden_field_tag :direction, params[:direction] %>
 <%= hidden_field_tag :sort, params[:sort] %>

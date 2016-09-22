@@ -1,7 +1,7 @@
 class Song < ActiveRecord::Base
-  def self.search(search)
-    if search
-      where('title LIKE ?', "%#{search}%")
+  def self.search(title, artist, album)
+    if title || artist || album
+      where('title LIKE ? AND artist LIKE ? AND album LIKE ?', "%#{title}%", "%#{artist}%", "%#{album}%")
     else
       all
     end
