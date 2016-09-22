@@ -17,11 +17,12 @@
 //= require_tree .
 
 $(function() {
-  $("#songs th a, #songs .pagination a").on("click", function() {
+  $(document).on("click","#songs th a, #songs .pagination a", function() {
     $.getScript(this.href);
     return false;
   });
   $("#songs_search input").keyup(function() {
+    console.log("test");
     $.get($("#songs_search").attr("action"), $("#songs_search").serialize(), null, "script");
     return false;
   });
