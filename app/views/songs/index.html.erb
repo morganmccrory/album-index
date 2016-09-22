@@ -1,9 +1,10 @@
 <h1>TuneCore Album Index</h1>
+<h4>Search by title, artist, and album.</h4>
 <br><br>
 <%= form_tag songs_path, :method => 'get', :id => "songs_search" do %>
   <p>
-    <%= text_field_tag :title, params[:title], placeholder: "Title" %> and/or
-    <%= text_field_tag :artist, params[:artist], placeholder: "Artist" %> and/or
+    <%= text_field_tag :title, params[:title], placeholder: "Title" %>
+    <%= text_field_tag :artist, params[:artist], placeholder: "Artist" %>
     <%= text_field_tag :album, params[:album], placeholder: "Album" %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   </p>
