@@ -3,7 +3,7 @@
 <br><br>
 <%= form_tag songs_path, :method => 'get', :id => "songs_search" do %>
   <p>
-    <%= text_field_tag :title, params[:title], placeholder: "Title" %>
+    <%= text_field_tag :title, params[:title], placeholder: "Song Title" %>
     <%= text_field_tag :artist, params[:artist], placeholder: "Artist" %>
     <%= text_field_tag :album, params[:album], placeholder: "Album" %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
