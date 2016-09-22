@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(function() {
-  $("#songs th a, #songs .pagination a").live("click", function() {
+  $("#songs th a, #songs .pagination a").on("click", function() {
     $.getScript(this.href);
     return false;
   });
